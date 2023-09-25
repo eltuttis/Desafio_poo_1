@@ -1,2 +1,4 @@
-package com.juego.dominio;public class Juego {
+package com.juego.dominio;
+
+public class Juego {
 }

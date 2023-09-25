@@ -1,2 +1,7 @@
-package com.pi_pa_ti.app;public class JuegoApp {
+package com.juego.app;
+
+public class JuegoApp {
+    public static void main(String[] args) {
+
+    }
 }
