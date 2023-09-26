@@ -2,17 +2,23 @@ package com.calculadora.dominio;
 
 import com.calculadora.app.AppCalculadora;
 
+import java.text.DecimalFormat;
+
 public class Calculadora {
-    public static int sumar(int numero1,int numero2){
+    public static Double sumar(Double numero1,Double numero2){
         return numero1 + numero2;
     }
-    public static int restar(int numero1,int numero2){
+    public static Double restar(Double numero1,Double numero2){
         return numero1 - numero2;
     }
-    public static int multiplicacion(int numero1,int numero2){
+    public static Double multiplicacion(Double numero1,Double numero2){
         return numero1 * numero2;
     }
-    public static float division(int numero1,int numero2){
+    public static Double division(Double numero1,Double numero2){
         return numero1/numero2;
+    }
+    public static String redondear(double numero){
+        DecimalFormat formato = new DecimalFormat("#.##"); // Dos decimales
+        return formato.format(numero);
     }
 }
