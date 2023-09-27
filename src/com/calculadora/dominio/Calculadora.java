@@ -1,10 +1,12 @@
 package com.calculadora.dominio;
-
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import com.calculadora.app.AppCalculadora;
 
 import java.text.DecimalFormat;
 
 public class Calculadora {
+    private static final int decimales= 2;
     public static Double sumar(Double numero1,Double numero2){
         return numero1 + numero2;
     }
@@ -21,4 +23,5 @@ public class Calculadora {
         DecimalFormat formato = new DecimalFormat("#.##"); // Dos decimales
         return formato.format(numero);
     }
+
 }

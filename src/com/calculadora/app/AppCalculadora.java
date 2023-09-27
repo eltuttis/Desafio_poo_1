@@ -37,11 +37,19 @@ public class AppCalculadora {
         JOptionPane.showMessageDialog(null, mensaje, "Calculadora", JOptionPane.ERROR_MESSAGE);
     }
 
-    public static void mostrarMensaje(String mensaje,double numero) {
+    /*public static void mostrarMensaje(String mensaje,double numero) {
+        String numeroRedondeadoyString = String.valueOf(numero);
         if (redondear.isSelected()) {
-            Calculadora.redondear(numero);
+            numeroRedondeadoyString = Calculadora.redondear(numero);
         }
-        JOptionPane.showMessageDialog(null, mensaje+ numero, "Calculadora", JOptionPane.INFORMATION_MESSAGE);
+        JOptionPane.showMessageDialog(null, mensaje+ numeroRedondeadoyString, "Calculadora", JOptionPane.INFORMATION_MESSAGE);
+    }*/
+    public static void mostrarMensaje(String mensaje,double numero) {
+        String numeroRedondeadoyString = String.valueOf(numero);
+        if (redondear.isSelected()) {
+            numeroRedondeadoyString = Calculadora.redondear(numero);
+        }
+        JOptionPane.showMessageDialog(null, mensaje+ numeroRedondeadoyString, "Calculadora", JOptionPane.INFORMATION_MESSAGE);
     }
     public static int mostarMenu(){
         int opcion = JOptionPane.showOptionDialog(null,"¿Qué operación desea realizar?","Calculadora",0,JOptionPane.QUESTION_MESSAGE,null,OPCIONES,null);
