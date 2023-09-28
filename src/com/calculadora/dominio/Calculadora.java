@@ -1,7 +1,5 @@
 package com.calculadora.dominio;
-import java.math.BigDecimal;
-import java.math.RoundingMode;
-import com.calculadora.app.AppCalculadora;
+
 
 import java.text.DecimalFormat;
 

@@ -3,10 +3,11 @@ package com.calculadora.app;
 import com.calculadora.dominio.Calculadora;
 
 import javax.swing.*;
-import java.text.DecimalFormat;
+
 import java.util.Arrays;
 
 public class AppCalculadora {
+    private static ImageIcon icono = new ImageIcon(AppCalculadora.class.getResource("calculadora.png"));
     static JCheckBox redondear = new JCheckBox("redondear");
     private static final  Object[] OPCIONES= Arrays.asList("Sumar","Restar","Multiplicar","Dividir",redondear).toArray();
     private static final int SUMAR = 0;
@@ -37,13 +38,7 @@ public class AppCalculadora {
         JOptionPane.showMessageDialog(null, mensaje, "Calculadora", JOptionPane.ERROR_MESSAGE);
     }
 
-    /*public static void mostrarMensaje(String mensaje,double numero) {
-        String numeroRedondeadoyString = String.valueOf(numero);
-        if (redondear.isSelected()) {
-            numeroRedondeadoyString = Calculadora.redondear(numero);
-        }
-        JOptionPane.showMessageDialog(null, mensaje+ numeroRedondeadoyString, "Calculadora", JOptionPane.INFORMATION_MESSAGE);
-    }*/
+
     public static void mostrarMensaje(String mensaje,double numero) {
         String numeroRedondeadoyString = String.valueOf(numero);
         if (redondear.isSelected()) {
@@ -52,7 +47,7 @@ public class AppCalculadora {
         JOptionPane.showMessageDialog(null, mensaje+ numeroRedondeadoyString, "Calculadora", JOptionPane.INFORMATION_MESSAGE);
     }
     public static int mostarMenu(){
-        int opcion = JOptionPane.showOptionDialog(null,"¿Qué operación desea realizar?","Calculadora",0,JOptionPane.QUESTION_MESSAGE,null,OPCIONES,null);
+        int opcion = JOptionPane.showOptionDialog(null,"¿Qué operación desea realizar?","Calculadora",0,JOptionPane.QUESTION_MESSAGE,icono,OPCIONES,null);
 
         if (opcion == JOptionPane.CLOSED_OPTION) {
             System.exit(opcion);
